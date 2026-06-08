@@ -5,49 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samhith Nadig</title>
     <style>
-        :root { --border: 3px solid #000; --shadow: 6px 6px 0px #000; --bg: #fff; }
-        body { background: #f0f0f0; font-family: 'Courier New', monospace; padding: 40px; }
-        
+        :root { 
+            --border: 4px solid #000; 
+            --shadow: 8px 8px 0px #000; 
+            --bg: #f0f0f0; 
+            --card-bg: #fff;
+            --accent-pink: #ff71ce;
+            --accent-cyan: #01cdfe;
+        }
+        body { background: var(--bg); font-family: 'Courier New', monospace; padding: 40px; }
         .container { max-width: 800px; margin: 0 auto; }
         
-        /* Header */
         h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 20px; }
         
-        /* Cards */
         .project-card { 
-            background: var(--bg); 
+            background: var(--card-bg); 
             border: var(--border); 
             padding: 30px; 
-            margin-bottom: 20px; 
+            margin-bottom: 25px; 
             box-shadow: var(--shadow);
-            transition: 0.1s;
+            transition: 0.2s;
         }
-        .project-card:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px #000; }
+        
+        .project-card:hover { transform: translate(4px, 4px); box-shadow: 4px 4px 0px #000; background: var(--accent-cyan); }
         
         h2 { margin: 0 0 10px 0; text-transform: uppercase; }
-        .tech { font-weight: bold; background: #ffff00; padding: 2px 5px; }
-        a { color: #000; text-decoration: none; border-bottom: 2px solid #000; }
+        .tag { font-weight: bold; background: var(--accent-pink); padding: 2px 8px; border: 2px solid #000; display: inline-block; margin-bottom: 10px; }
+        
+        a { color: #000; text-decoration: none; border-bottom: 3px solid #000; font-weight: bold; }
+        a:hover { background: var(--accent-pink); }
+        .footer { margin-top: 40px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>SAMHITH NADIG</h1>
-        <p>17 | ML ENGINEER | F1 DATA ENTHUSIAST</p>
+        <p>17 | ML STUDENT</p>
 
         <div class="project-card">
-            <h2>F1 PITSTOP CHALLENGE</h2>
-            <p>Ranked 756th globally. Built a machine learning pipeline using <span class="tech">CatBoost</span> and <span class="tech">LightGBM</span> to minimize pit stop duration.</p>
+            <span class="tag">MACHINE LEARNING</span>
+            <h2>F1 PITSTOP PREDICTION</h2>
+            <p>Built a custom ML pipeline using <strong>CatBoost</strong> and <strong>LightGBM</strong> to predict and optimize F1 pitstop durations for a personal challenge.</p>
         </div>
 
         <div class="project-card">
+            <span class="tag">DATA ENGINEERING</span>
             <h2>KCET ROUND 3 DATA</h2>
-            <p>Data engineering project focused on sorting and cleaning high-volume educational datasets for predictive modeling.</p>
+            <p>Processed and cleaned high-volume educational datasets to facilitate predictive analysis on seat allocation models.</p>
         </div>
 
         <div class="project-card">
+            <span class="tag">CONTACT</span>
             <h2>LINKS</h2>
             <p><a href="https://twitter.com/yourhandle" target="_blank">TWITTER @YOURHANDLE</a></p>
+        </div>
+
+        <div class="footer">
+            <p>EMAIL: <a href="mailto:samhithnadig@gmail.com">samhithnadig@gmail.com</a></p>
         </div>
     </div>
 
