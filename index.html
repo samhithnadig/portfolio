@@ -10,36 +10,43 @@
             --shadow: 8px 8px 0px #000; 
             --bg: #f0f0f0; 
             --card-bg: #fff;
+            --text: #000;
             --accent-pink: #ff71ce;
             --accent-cyan: #01cdfe;
         }
-        body { background: var(--bg); font-family: 'Courier New', monospace; padding: 40px; }
+
+        /* Dark Mode Override */
+        body.dark-mode { --bg: #1a1a1a; --card-bg: #2d2d2d; --text: #fff; }
+        body.yellow-mode { --bg: #ffcc00; --card-bg: #fff; }
+
+        body { background: var(--bg); color: var(--text); font-family: 'Courier New', monospace; padding: 40px; transition: 0.3s; }
         .container { max-width: 800px; margin: 0 auto; }
         
+        button { 
+            background: var(--accent-pink); border: var(--border); padding: 10px 20px; 
+            font-weight: bold; cursor: pointer; margin-bottom: 20px; 
+        }
+
         h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 20px; }
         
         .project-card { 
-            background: var(--card-bg); 
-            border: var(--border); 
-            padding: 30px; 
-            margin-bottom: 25px; 
-            box-shadow: var(--shadow);
-            transition: 0.2s;
+            background: var(--card-bg); border: var(--border); padding: 30px; 
+            margin-bottom: 25px; box-shadow: var(--shadow); transition: 0.2s;
         }
         
-        .project-card:hover { transform: translate(4px, 4px); box-shadow: 4px 4px 0px #000; background: var(--accent-cyan); }
+        .project-card:hover { transform: translate(4px, 4px); box-shadow: 4px 4px 0px #000; background: var(--accent-cyan); color: #000; }
         
         h2 { margin: 0 0 10px 0; text-transform: uppercase; }
         .tag { font-weight: bold; background: var(--accent-pink); padding: 2px 8px; border: 2px solid #000; display: inline-block; margin-bottom: 10px; }
         
-        a { color: #000; text-decoration: none; border-bottom: 3px solid #000; font-weight: bold; }
-        a:hover { background: var(--accent-pink); }
+        a { color: var(--text); text-decoration: none; border-bottom: 3px solid var(--text); font-weight: bold; }
         .footer { margin-top: 40px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <button onclick="changeTheme()">CYCLE BACKGROUND</button>
         <h1>SAMHITH NADIG</h1>
         <p>17 | ML STUDENT</p>
 
@@ -55,16 +62,21 @@
             <p>Processed and cleaned high-volume educational datasets to facilitate predictive analysis on seat allocation models.</p>
         </div>
 
-        <div class="project-card">
-            <span class="tag">CONTACT</span>
-            <h2>LINKS</h2>
-            <p><a href="https://twitter.com/yourhandle" target="_blank">TWITTER @YOURHANDLE</a></p>
-        </div>
-
         <div class="footer">
             <p>EMAIL: <a href="mailto:samhithnadig@gmail.com">samhithnadig@gmail.com</a></p>
         </div>
     </div>
 
+    <script>
+        function changeTheme() {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.replace('dark-mode', 'yellow-mode');
+            } else if (document.body.classList.contains('yellow-mode')) {
+                document.body.classList.remove('yellow-mode');
+            } else {
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
 </body>
 </html>
