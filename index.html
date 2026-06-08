@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | 17</title>
+    <style>
+        :root { --bg: #ffcc00; --accent: #000; --card: #fff; }
+        .theme-pink { --bg: #ff99cc; }
+        .theme-olive { --bg: #b5ba72; }
+        .theme-cyan { --bg: #00cccc; }
+
+        body { background-color: var(--bg); font-family: monospace; transition: 0.3s; padding: 20px; }
+        .card { border: 4px solid var(--accent); background: var(--card); padding: 20px; margin-bottom: 20px; box-shadow: 8px 8px 0px var(--accent); }
+        button { border: 2px solid var(--accent); padding: 10px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body class="theme-pink">
+
+    <div class="card">
+        <h1>Hi, I'm 17.</h1>
+        <p>ML Engineer | F1 Data Scientist</p>
+        <button onclick="document.body.className='theme-pink'">Pink</button>
+        <button onclick="document.body.className='theme-olive'">Olive</button>
+        <button onclick="document.body.className='theme-cyan'">Cyan</button>
+    </div>
+
+    <div class="card">
+        <h2>Kaggle F1 Pitstop: 756th Position</h2>
+        <p>Built a pipeline using CatBoost & LightGBM to optimize race strategy.</p>
+    </div>
+
+    <div class="card">
+        <h2>KCET Round 3 Data</h2>
+        <p>Processed massive datasets, sorting and cleaning for predictive analysis.</p>
+        <a href="https://twitter.com/yourhandle" target="_blank">Twitter @handle</a>
+    </div>
+
+</body>
+</html>
