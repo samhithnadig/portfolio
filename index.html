@@ -2,46 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio | 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samhith Nadig</title>
     <style>
-        /* Neo-Brutalism Theme Definitions */
-        :root { --bg: #fff; --border: #000; --shadow: 8px 8px 0px #000; }
-        .pink { --theme: #ff99cc; }
-        .olive { --theme: #b5ba72; }
-        .cyan { --theme: #00cccc; }
-
-        body { font-family: sans-serif; background-color: var(--theme, #fff); transition: 0.3s; padding: 50px; }
-        .card { background: #fff; border: 4px solid var(--border); padding: 25px; margin-bottom: 30px; box-shadow: var(--shadow); max-width: 600px; }
-        h1, h2 { text-transform: uppercase; margin-top: 0; }
-        button { background: #fff; border: 3px solid var(--border); padding: 10px 20px; font-weight: 900; cursor: pointer; margin-right: 10px; box-shadow: 4px 4px 0px var(--border); }
-        button:hover { background: var(--theme); }
-        a { color: var(--border); font-weight: bold; text-decoration: underline; }
+        :root { --border: 3px solid #000; --shadow: 6px 6px 0px #000; --bg: #fff; }
+        body { background: #f0f0f0; font-family: 'Courier New', monospace; padding: 40px; }
+        
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        /* Header */
+        h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 20px; }
+        
+        /* Cards */
+        .project-card { 
+            background: var(--bg); 
+            border: var(--border); 
+            padding: 30px; 
+            margin-bottom: 20px; 
+            box-shadow: var(--shadow);
+            transition: 0.1s;
+        }
+        .project-card:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px #000; }
+        
+        h2 { margin: 0 0 10px 0; text-transform: uppercase; }
+        .tech { font-weight: bold; background: #ffff00; padding: 2px 5px; }
+        a { color: #000; text-decoration: none; border-bottom: 2px solid #000; }
     </style>
 </head>
-<body class="pink">
+<body>
 
-    <div class="card">
-        <h1>I AM 17.</h1>
-        <p>ML Engineer & Data Enthusiast</p>
-        <button onclick="document.body.className='pink'">Bubblegum Pink</button>
-        <button onclick="document.body.className='olive'">Olive Green</button>
-        <button onclick="document.body.className='cyan'">Cyan Blue</button>
-    </div>
+    <div class="container">
+        <h1>SAMHITH NADIG</h1>
+        <p>17 | ML ENGINEER | F1 DATA ENTHUSIAST</p>
 
-    <div class="card">
-        <h2>F1 PITSTOP CHALLENGE</h2>
-        <p><strong>Rank: 756th</strong></p>
-        <p>Built a high-performance machine learning pipeline using <strong>CatBoost</strong> and <strong>LightGBM</strong> to optimize pitstop efficiency.</p>
-    </div>
+        <div class="project-card">
+            <h2>F1 PITSTOP CHALLENGE</h2>
+            <p>Ranked 756th globally. Built a machine learning pipeline using <span class="tech">CatBoost</span> and <span class="tech">LightGBM</span> to minimize pit stop duration.</p>
+        </div>
 
-    <div class="card">
-        <h2>KCET ROUND 3 DATA</h2>
-        <p>Expertly handled and sorted massive datasets, ensuring data integrity and actionable insights.</p>
-    </div>
+        <div class="project-card">
+            <h2>KCET ROUND 3 DATA</h2>
+            <p>Data engineering project focused on sorting and cleaning high-volume educational datasets for predictive modeling.</p>
+        </div>
 
-    <div class="card">
-        <h2>CONNECT</h2>
-        <p>Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p>
+        <div class="project-card">
+            <h2>LINKS</h2>
+            <p><a href="https://twitter.com/yourhandle" target="_blank">TWITTER @YOURHANDLE</a></p>
+        </div>
     </div>
 
 </body>
