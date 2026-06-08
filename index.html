@@ -2,38 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | 17</title>
     <style>
-        :root { --bg: #ffcc00; --accent: #000; --card: #fff; }
-        .theme-pink { --bg: #ff99cc; }
-        .theme-olive { --bg: #b5ba72; }
-        .theme-cyan { --bg: #00cccc; }
+        /* Neo-Brutalism Theme Definitions */
+        :root { --bg: #fff; --border: #000; --shadow: 8px 8px 0px #000; }
+        .pink { --theme: #ff99cc; }
+        .olive { --theme: #b5ba72; }
+        .cyan { --theme: #00cccc; }
 
-        body { background-color: var(--bg); font-family: monospace; transition: 0.3s; padding: 20px; }
-        .card { border: 4px solid var(--accent); background: var(--card); padding: 20px; margin-bottom: 20px; box-shadow: 8px 8px 0px var(--accent); }
-        button { border: 2px solid var(--accent); padding: 10px; cursor: pointer; font-weight: bold; }
+        body { font-family: sans-serif; background-color: var(--theme, #fff); transition: 0.3s; padding: 50px; }
+        .card { background: #fff; border: 4px solid var(--border); padding: 25px; margin-bottom: 30px; box-shadow: var(--shadow); max-width: 600px; }
+        h1, h2 { text-transform: uppercase; margin-top: 0; }
+        button { background: #fff; border: 3px solid var(--border); padding: 10px 20px; font-weight: 900; cursor: pointer; margin-right: 10px; box-shadow: 4px 4px 0px var(--border); }
+        button:hover { background: var(--theme); }
+        a { color: var(--border); font-weight: bold; text-decoration: underline; }
     </style>
 </head>
-<body class="theme-pink">
+<body class="pink">
 
     <div class="card">
-        <h1>Hi, I'm 17.</h1>
-        <p>ML Engineer | F1 Data Scientist</p>
-        <button onclick="document.body.className='theme-pink'">Pink</button>
-        <button onclick="document.body.className='theme-olive'">Olive</button>
-        <button onclick="document.body.className='theme-cyan'">Cyan</button>
+        <h1>I AM 17.</h1>
+        <p>ML Engineer & Data Enthusiast</p>
+        <button onclick="document.body.className='pink'">Bubblegum Pink</button>
+        <button onclick="document.body.className='olive'">Olive Green</button>
+        <button onclick="document.body.className='cyan'">Cyan Blue</button>
     </div>
 
     <div class="card">
-        <h2>Kaggle F1 Pitstop: 756th Position</h2>
-        <p>Built a pipeline using CatBoost & LightGBM to optimize race strategy.</p>
+        <h2>F1 PITSTOP CHALLENGE</h2>
+        <p><strong>Rank: 756th</strong></p>
+        <p>Built a high-performance machine learning pipeline using <strong>CatBoost</strong> and <strong>LightGBM</strong> to optimize pitstop efficiency.</p>
     </div>
 
     <div class="card">
-        <h2>KCET Round 3 Data</h2>
-        <p>Processed massive datasets, sorting and cleaning for predictive analysis.</p>
-        <a href="https://twitter.com/yourhandle" target="_blank">Twitter @handle</a>
+        <h2>KCET ROUND 3 DATA</h2>
+        <p>Expertly handled and sorted massive datasets, ensuring data integrity and actionable insights.</p>
+    </div>
+
+    <div class="card">
+        <h2>CONNECT</h2>
+        <p>Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p>
     </div>
 
 </body>
